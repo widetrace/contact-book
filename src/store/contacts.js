@@ -84,7 +84,9 @@ export default {
   },
   mutations: {
     addContact(state, payload) {
-      payload.id = state.list.length;
+      // избегаем повторов ID
+      payload.id = +state.list[state.list.length - 1].id + 1;
+
       state.list = [...state.list, payload];
     },
     addGroup(state, payload) {
@@ -94,11 +96,11 @@ export default {
       state.list[info.id] = info;
     },
     deleteContact(state, id) {
-      state.list = state.list.filter(contact => {
-        if (contact.id != id){
-          return true
+      state.list = state.list.filter((contact) => {
+        if (contact.id != id) {
+          return true;
         }
-      })
+      });
     },
   },
   actions: {},

@@ -89,9 +89,9 @@ export default {
   display: grid;
   grid-template-areas: "menu-left main menu-right";
   grid-template-columns:
-    minmax(150px, 0.33fr)
-    minmax(150px, 1fr)
-    minmax(150px, 0.33fr);
+    0.33fr
+    1fr
+    0.33fr;
   &-menu-left {
     border-right: 1px solid black;
     grid-area: menu-left;
@@ -122,11 +122,11 @@ export default {
       width: 100%;
       // margin: 0 auto;
       grid-template-columns:
-        minmax(150px, 1fr)
-        minmax(150px, 0.66fr)
-        minmax(150px, 1fr)
-        minmax(150px, 1.67fr)
-        minmax(150px, 0.33fr);
+        1fr
+        0.66fr
+        1fr
+        1.67fr
+        0.33fr;
       thead,
       tbody,
       tr {
